@@ -1,6 +1,8 @@
 def adding_one(a):
     return a + 1
-
+#todo look at reaplacing it with adding one...
+def subtracting_one(a):
+    return a-1
 
 def adding(a, b):
     for _ in range(b):
@@ -9,7 +11,11 @@ def adding(a, b):
 
 
 def subtraction(a, b):
-    return adding(a, -b)
+    # todo maybe add fix for this...
+    #return adding(a, -b)
+    for _ in range(b):
+        a = subtracting_one(a)
+    return a
 
 
 def multiplication(a, b):
@@ -52,5 +58,3 @@ def add_to_list(original_list, value):
 
 def square_list(original_list):
     return [multiplication(x, x) for x in original_list]
-
-
