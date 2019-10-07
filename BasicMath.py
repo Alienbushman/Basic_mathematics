@@ -4,7 +4,7 @@ def adding_one(a):
 
 # todo look at reaplacing it with adding one...
 def subtracting_one(a):
-    return a + 1
+    return a - 1
 
 
 def adding(a, b):
