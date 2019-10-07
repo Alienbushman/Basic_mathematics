@@ -1,8 +1,11 @@
 def adding_one(a):
     return a + 1
-#todo look at reaplacing it with adding one...
+
+
+# todo look at reaplacing it with adding one...
 def subtracting_one(a):
-    return a-1
+    return a + 1
+
 
 def adding(a, b):
     for _ in range(b):
@@ -12,7 +15,7 @@ def adding(a, b):
 
 def subtraction(a, b):
     # todo maybe add fix for this...
-    #return adding(a, -b)
+    # return adding(a, -b)
     for _ in range(b):
         a = subtracting_one(a)
     return a
