@@ -61,3 +61,4 @@ def add_to_list(original_list, value):
 
 def square_list(original_list):
     return [multiplication(x, x) for x in original_list]
+print(adding_one(2))
