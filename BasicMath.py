@@ -1,5 +1,5 @@
 def adding_one(a):
-    return a + 1
+    return a - 1
 
 
 # todo look at reaplacing it with adding one...
