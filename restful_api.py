@@ -30,7 +30,16 @@ class api_manager(Resource):
         json_format=request.get_json()
         converted_format = convert_data(json_format)
         result=[]
+        functions = {'add': BasicMath.adding,'subtract':BasicMath.subtraction,'multiplication':BasicMath.multiplication,'integer_divide':BasicMath.integer_divide,'remainder':BasicMath.remainder,
+        'power':BasicMath.power,'root':BasicMath.root}
         for datapoint in converted_format:
+        	try:
+        		result.append(functions[datapoint['operation']](datapoint['num_1'],datapoint['num_2']))
+        	except:
+        		result.append('operation not supported')
+
+        	'''
+        	#original fixed to new function for better styling
         	if(datapoint['operation']=='add'):
         		result.append(BasicMath.adding(datapoint['num_1'],datapoint['num_2']))
         	elif(datapoint['operation']=='subtract'):
@@ -45,7 +54,7 @@ class api_manager(Resource):
         		result.append(BasicMath.power(datapoint['num_1'],datapoint['num_2']))
         	elif(datapoint['operation']=='root'):
         		result.append(BasicMath.root(datapoint['num_1'],datapoint['num_2']))
-
+			'''
         return result, 201
 
 api.add_resource(api_manager,'/')

@@ -6,4 +6,5 @@ docker build -t python-barcode .
 docker run python-barcode
 
 To run the restful api in a docker container
+docker build -t python-barcode .
 docker run --network="host" python-barcode
