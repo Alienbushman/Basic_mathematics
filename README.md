@@ -9,12 +9,13 @@ To run the restful api in a docker container
 docker build -t python-barcode .
 docker run --network="host" python-barcode
 
-#to test quality of code
+# to test quality of code
 pipenv install
 pipenv shell
 pylint BasicMath.py
 
-#to read documentation
+# to read documentation
 python -m pydoc -w restful_api
-#or open a web browser
+
+# or open a web browser
 python -m pydoc -p 5433
