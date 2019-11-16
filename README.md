@@ -19,3 +19,17 @@ python -m pydoc -w restful_api
 
 # or open a web browser
 python -m pydoc -p 5433
+
+# for basic covarage testing
+coverage run BasicMathTest.py
+coverage report
+# or to get an html document with an outlined section on what is being covered
+coverage html
+# Note you can also run decision coverage if you want with 
+coverage run --branch BasicMathTest.py
+
+# To run mutation testing
+ mut.py -t basic_math.py --unit-test BasicMathTest.py 
+# add the following flag in order to carfully inspect code and see why mutants survived
+ -r REPORT_FILE
+ # It is rather well documented https://pypi.org/project/MutPy/
