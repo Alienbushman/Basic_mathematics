@@ -106,6 +106,7 @@ class ApiManager(Resource):
                      'power': basic_math.power,
                      'root': basic_math.root}
         for datapoint in converted_format:
+          # todo remove old code
             '''#original fixed to new function for better styling
           if(datapoint['operation']=='add'):
               result.append(BasicMath.adding(datapoint['num_1'],datapoint['num_2']))
