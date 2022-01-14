@@ -1,7 +1,7 @@
 # Basic_mathematics
 This is a repository to showcase some basic functions by extrapolating the +1 and -1 function into a basic calculator ([inspired by a Feynman lecture](https://www.feynmanlectures.caltech.edu/I_22.html) ). 
 
-I am planning to use it as a proof of concept for integrating technologies
+This is mainly a showcase for taking a basic project and integrating it with everything you would want in an end-end project (Docker, CI/CD, Restful API, static code analysis, unit tests, coverage).
 
 # Overview of the structure
 The code for the project can be accessed via the project of basic_math.py as demonstrated with unit tests in basic_math_test.py <br />
