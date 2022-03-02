@@ -1,5 +1,5 @@
 # Basic_mathematics
-This is a repository to showcase some basic functions by extrapolating the +1 and -1 function into a basic calculator ([inspired by a Feynman lecture](https://www.feynmanlectures.caltech.edu/I_22.html) ). 
+This is a repository to showcase some basic functions by extrapolating the +1 and -1 function into a basic calculator ([inspired by a Feynman lecture](https://www.feynmanlectures.caltech.edu/I_22.html)). 
 
 This is mainly a showcase for taking a basic project and integrating it with everything you would want in an end-end project (Docker, CI/CD, Restful API, static code analysis, unit tests, coverage).
 
