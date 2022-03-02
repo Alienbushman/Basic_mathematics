@@ -39,7 +39,6 @@ def adding(integer_one, integer_two):
 
 
 # todo maybe add fix for this...
-# return adding(integer_one, -integer_two)
 def subtraction(integer_one, integer_two):
     """
        It subtracts one number from another
@@ -155,4 +154,5 @@ def square_list(original_list):
     return [multiplication(x, x) for x in original_list]
 
 
-print(adding_one(2))
+if __name__ == "__main__":
+    print(adding_one(2))

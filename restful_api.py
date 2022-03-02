@@ -71,7 +71,7 @@ def convert_data(json_data):
 
 
 class ApiManager(Resource):
-    '''
+    """
     The api which manages the resources for a flask restful api
     which can be used to communicate with
 
@@ -84,7 +84,8 @@ class ApiManager(Resource):
     post(self)
         This receives resources when listening on the API and sends it off
         to be converted at convert_data(json_format) and communicates with the basic_math module
-    '''
+    """
+
     def post(self):
         '''
         The default flask required format, communicates with requests
@@ -106,22 +107,6 @@ class ApiManager(Resource):
                      'power': basic_math.power,
                      'root': basic_math.root}
         for datapoint in converted_format:
-          # todo remove old code
-            '''#original fixed to new function for better styling
-          if(datapoint['operation']=='add'):
-              result.append(BasicMath.adding(datapoint['num_1'],datapoint['num_2']))
-          elif(datapoint['operation']=='subtract'):
-              result.append(BasicMath.subtraction(datapoint['num_1'],datapoint['num_2']))
-          elif(datapoint['operation']=='multiplication'):
-              result.append(BasicMath.multiplication(datapoint['num_1'],datapoint['num_2']))
-          elif(datapoint['operation']=='integer_divide'):
-              result.append(BasicMath.integer_divide(datapoint['num_1'],datapoint['num_2']))
-          elif(datapoint['operation']=='remainder'):
-              result.append(BasicMath.remainder(datapoint['num_1'],datapoint['num_2']))
-          elif(datapoint['operation']=='power'):
-              result.append(BasicMath.power(datapoint['num_1'],datapoint['num_2']))
-          elif(datapoint['operation']=='root'):
-              result.append(BasicMath.root(datapoint['num_1'],datapoint['num_2']))'''
             try:
                 result.append(
                     functions[datapoint['operation']]
@@ -131,6 +116,7 @@ class ApiManager(Resource):
                 result.append('operation not supported')
 
         return result, 201
+
 
 API.add_resource(ApiManager, '/')
 if __name__ == '__main__':
